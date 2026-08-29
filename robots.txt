@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seo-service-page.salman0001.workers.dev/sitemap.xml

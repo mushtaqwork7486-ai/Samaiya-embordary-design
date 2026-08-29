@@ -1,0 +1,88 @@
+
+:root{
+ --wine:#861346; --wine2:#a51d5d; --pink:#fce7f0; --soft:#fff7fa;
+ --gold:#f4c62e; --ink:#42162b; --muted:#76586a; --white:#fff;
+ --shadow:0 18px 45px rgba(91,20,55,.12); --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--soft);line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:#5e0d32;color:#ffeef6;text-align:center;padding:8px;font-size:13px}
+header{position:sticky;top:0;z-index:50;background:rgba(134,19,70,.97);box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:10px;color:white}
+.brand img{width:48px;height:48px}
+.brand strong{font-family:Georgia,serif;font-size:25px;color:#ff9ac4}
+.brand span{display:block;color:#fff;font-size:9px;letter-spacing:4px}
+.menu{display:flex;gap:25px;align-items:center;color:#fff;font-size:14px}
+.menu a:hover,.menu a.active{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 20px;background:var(--gold);color:#4c2411;font-weight:800;cursor:pointer}
+.btn.wine{background:var(--wine);color:#fff}
+.btn.outline{background:transparent;border:1px solid #e7b8cb;color:var(--wine)}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:28px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#fff7fa 0%,#fde5ef 52%,#f9d3e2 100%);padding:75px 0}
+.hero:before,.section.pattern:before{content:"";position:absolute;inset:0;opacity:.16;background-image:radial-gradient(#861346 1px,transparent 1px);background-size:18px 18px;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.eyebrow{color:var(--wine2);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px}
+h1{font:700 clamp(40px,6vw,68px)/1.08 Georgia,serif;margin:15px 0;color:var(--wine)}
+h2{font:700 clamp(30px,4vw,44px)/1.15 Georgia,serif;color:var(--wine);margin-bottom:14px}
+h3{font:700 22px Georgia,serif;color:var(--wine)}
+.lead{font-size:18px;color:var(--muted);max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-photo{position:relative}
+.photo-frame{background:white;padding:10px;border-radius:35px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.photo-frame img{height:560px;width:100%;object-fit:cover;object-position:center 30%;border-radius:28px}
+.flower{position:absolute;right:-15px;bottom:-18px;font-size:85px;filter:drop-shadow(0 5px 5px rgba(0,0,0,.1))}
+.section{position:relative;padding:75px 0}
+.section.pattern{background:#fff}
+.center{text-align:center}
+.center .lead{margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}
+.card{background:white;border:1px solid #f0d5e1;border-radius:var(--radius);padding:28px;box-shadow:0 8px 25px rgba(91,20,55,.06);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-size:25px;margin-bottom:16px}
+.service-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.service-list a{background:#fff;border:1px solid #efd5e0;padding:20px;border-radius:18px;font-weight:700;color:var(--wine)}
+.service-list a:hover{background:var(--pink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px}
+.stat{background:white;border-radius:18px;padding:25px;text-align:center;border:1px solid #f0d5e1}
+.stat b{font:700 34px Georgia,serif;color:var(--wine)}
+.quote{background:var(--wine);color:#fff;padding:55px 20px;text-align:center;position:relative;overflow:hidden}
+.quote h2{color:#fff3f8}
+.quote p{max-width:780px;margin:auto;font:italic 20px Georgia,serif}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.gallery .tile{overflow:hidden;border-radius:20px;background:#eee;aspect-ratio:1}
+.gallery .tile img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gallery .tile:hover img{transform:scale(1.06)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.owner{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}
+.owner img{height:460px;width:100%;object-fit:cover;object-position:center 25%;border-radius:25px;box-shadow:var(--shadow)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+form{display:grid;gap:14px}
+input,textarea,select{width:100%;border:1px solid #e4c3d1;border-radius:12px;padding:14px;font:inherit;background:#fff}
+textarea{min-height:150px;resize:vertical}
+.info{display:grid;gap:15px;margin-top:20px}
+.info div{background:#fff;padding:17px;border-radius:14px;border:1px solid #efd5e0}
+.breadcrumb{background:#fff1f6;padding:18px 0;color:var(--muted);font-size:14px}
+.page-hero{padding:65px 0;background:linear-gradient(110deg,#fff7fa,#f9d9e6);text-align:center}
+.page-hero h1{font-size:52px}
+footer{background:#5e0d32;color:#fcecf4;padding:55px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:35px}
+footer h3{color:#ffd6e6;font-size:18px;margin-bottom:14px}
+footer a{color:#f7dce7;display:block;margin:6px 0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:18px;text-align:center;font-size:13px}
+.toast{position:fixed;right:20px;bottom:20px;background:#42162b;color:white;padding:14px 18px;border-radius:12px;display:none;z-index:100}
+@media(max-width:900px){
+ .menu{display:none;position:absolute;left:0;right:0;top:76px;background:var(--wine);padding:20px;flex-direction:column}
+ .menu.open{display:flex}.menu-toggle{display:block}.hero-grid,.about-grid,.contact-grid,.owner{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr 1fr}.service-list{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+ .photo-frame img{height:470px}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .cards,.service-list,.gallery,.stats,.footer-grid{grid-template-columns:1fr}
+ .hero{padding:50px 0}.section{padding:55px 0}h1{font-size:42px}.page-hero h1{font-size:40px}
+ .brand strong{font-size:21px}
+}
